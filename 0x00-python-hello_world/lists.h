@@ -16,4 +16,4 @@ typedef struct listint_s
 } listint_t;
 
 int check_cycle(listint_t *list);
-#endif /* _LIST_H_ */
+#endif /* _LISTS_H_ */
