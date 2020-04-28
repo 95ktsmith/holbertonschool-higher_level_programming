@@ -1,5 +1,13 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * insert_node - inserts a node in an ordered list
+ * @head: Head of the linked list
+ * @number: Number to assign the to the new node
+ * Return: Address of the new node if successful, NULL in failure.
+ */
 
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -16,11 +24,16 @@ listint_t *insert_node(listint_t **head, int number)
     if (current == NULL)
     {
         new_node->next = NULL;
-        current = new_node;
+        *head = new_node;
+    }
+    else if (number <= current->n)
+    {
+        new_node->next = current;
+        *head = new_node;
     }
     else
     {
-        while(current && current->next && number > current->next->n)
+        while(current->next && number > current->next->n)
             current = current->next;
         new_node->next = current->next;
         current->next = new_node;
