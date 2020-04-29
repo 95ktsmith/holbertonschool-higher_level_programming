@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-digit = 0
 print("Last digit of {:d}".format(number), end=" ")
 
 if number < 0:
