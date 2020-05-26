@@ -8,8 +8,13 @@ class Rectangle:
     __width = 0
 
     def __str__(self):
-        """ string representation of the Rectangle """
-        return ((("#" * self.__width) + "\n") * self.__height)[:-1]
+        """ string representation of the Rectangle
+            If either width or height are 0, returns an empty string
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            return ((("#" * self.__width) + "\n") * self.__height)[:-1]
 
     def __init__(self, width=0, height=0):
         """ Init
