@@ -117,4 +117,5 @@ class Rectangle:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            return Rectangle(size, size)
+            newRectangle = Rectangle(size, size)
+            return newRectangle
