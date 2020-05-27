@@ -3,7 +3,7 @@
 
 
 def add_integer(a, b=98):
-    """ Adds two integers and returns the result 
+    """ Adds two integers and returns the result
         a and b must be integers or floats
     """
     import doctest
