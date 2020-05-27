@@ -29,19 +29,19 @@ class Rectangle:
             width and height need to be integers greater than or
             equal to zero
         """
+        if not isinstance(width, int):
+            raise TypeError("width" must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
+
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height < 0:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
-
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        elif width < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = width
 
         Rectangle.number_of_instances += 1
 
@@ -110,7 +110,6 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ Creates and returns and new Rectangle with width and height
-            equal to size. Size must be an integer and at least zero.
+            equal to size.
         """
-        newRectangle = Rectangle(size, size)
-        return newRectangle
+        return Rectangle(size, size)
