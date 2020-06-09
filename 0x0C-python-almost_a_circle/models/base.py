@@ -42,7 +42,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """ Returns an instance will all attributes set """
+        """ Returns an instance with all attributes set """
+        if dictionary is None:
+            return None
         obj = cls(1, 1)
         obj.update(**dictionary)
         return obj
