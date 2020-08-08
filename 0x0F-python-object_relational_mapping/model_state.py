@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ State module """
 
 from sqlalchemy.ext.declarative import declarative_base
