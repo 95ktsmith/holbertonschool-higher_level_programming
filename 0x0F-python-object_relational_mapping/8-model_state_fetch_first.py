@@ -15,9 +15,7 @@ if __name__ == "__main__":
     session = Session()
 
     try:
-        for id, state in session.query(State.id, State.name).\
-                         order_by(State.id).all():
-            print("{}. {}".format(id, state))
-            break
+        first = session.query(State).order_by(State.id).first()
+        print("{}. {}".format(first.id, first.name))
     except:
         print("Nothing")
