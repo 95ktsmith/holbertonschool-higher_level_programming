@@ -16,6 +16,6 @@ if __name__ == "__main__":
 
     try:
         first = session.query(State).order_by(State.id).first()
-        print("{}. {}".format(first.id, first.name))
+        print("{}: {}".format(first.id, first.name))
     except:
         print("Nothing")
