@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Display the body size of URL response
-curl -sI $1 | grep "Content-Length" | cut -d' ' -f2
+curl -sI "$1" | grep "Content-Length" | cut -d' ' -f2
