@@ -10,10 +10,6 @@ def find_peak(list_of_integers):
     if list_of_integers is None or len(list_of_integers) == 0:
         return None
 
-    # If list has only one number
-    if len(list_of_integers) == 1:
-        return list_of_integers[0]
-
     # Set index to center of the list to start testing
     index = int(len(list_of_integers) / 2)
 
