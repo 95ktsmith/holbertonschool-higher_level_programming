@@ -6,7 +6,7 @@ if (size.length === 0) {
   for (let row = 0; row < size[0]; row++) {
     let line = '';
     for (let column = 0; column < size[0]; column++) {
-      line += '#';
+      line += 'X';
     }
     console.log(line);
   }
