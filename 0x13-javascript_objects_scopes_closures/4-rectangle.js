@@ -28,4 +28,3 @@ module.exports = class Rectangle {
     this.width *= 2;
   }
 };
-
